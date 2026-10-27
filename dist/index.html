@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f5f0">
   <title>Silvana Caldas | Psicóloga Clínica em Manaus</title>
-  <meta name="description" content="Psicoterapia com Silvana Caldas, psicóloga clínica (CRP 20/08033). Atendimento presencial em Adrianópolis, Manaus, e online.">
+  <meta name="description" content="Psicoterapia e autocuidado emocional com Silvana Caldas, psicóloga clínica (CRP 20/08033). Atendimento presencial em Manaus e online. Baixe gratuitamente o Check-List da Saúde Mental.">
   <meta property="og:title" content="Silvana Caldas | Psicóloga Clínica">
   <meta property="og:description" content="Atendimento psicológico presencial em Manaus e online.">
   <meta property="og:type" content="website">
@@ -13,18 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%233d5148'/%3E%3Ctext x='20' y='27' font-family='Georgia' font-size='22' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/assets/silvana-logo.png">
   <style>
     :root {
-      --paper: #f7f5f0;
-      --white: #fffefa;
-      --ink: #252d29;
-      --muted: #68716b;
-      --green: #3d5148;
-      --green-dark: #2f4038;
-      --sage: #e6ebe5;
-      --line: #dedfd7;
-      --clay: #b97862;
+      --paper: #fbfbf9;
+      --white: #ffffff;
+      --ink: #202a2a;
+      --muted: #687171;
+      --green: #19bdb7;
+      --green-dark: #147a77;
+      --sage: #e8f8f6;
+      --line: #dce9e7;
+      --clay: #d5a93f;
+      --gold-pale: #fbf5e7;
       --serif: "Playfair Display", Georgia, serif;
       --sans: "DM Sans", Arial, sans-serif;
       --content: 1160px;
@@ -47,11 +48,11 @@
     .button:hover { background: var(--green-dark); transform: translateY(-1px); }
     .button-outline { background: transparent; color: var(--green); }
     .button-outline:hover { background: var(--sage); color: var(--green-dark); }
-    .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(40, 48, 43, .09); background: rgba(247,245,240,.96); backdrop-filter: blur(12px); }
-    .header-inner { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    .brand { display: flex; flex-direction: column; color: var(--ink); text-decoration: none; line-height: 1.2; }
-    .brand-name { font-family: var(--serif); font-size: 21px; letter-spacing: -.02em; }
-    .brand-role { margin-top: 4px; color: var(--muted); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+    .site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(34, 54, 51, .09); background: rgba(255,255,255,.97); backdrop-filter: blur(12px); }
+    .header-inner { height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: flex; align-items: center; color: var(--ink); text-decoration: none; line-height: 1.2; }
+    .brand img { width: 92px; height: 76px; object-fit: contain; }
+    .brand-crp { margin-left: 8px; color: var(--muted); font-size: 9px; letter-spacing: .06em; white-space: nowrap; }
     .nav { display: flex; align-items: center; gap: 30px; }
     .nav a { color: #45514a; text-decoration: none; font-size: 13px; font-weight: 500; }
     .nav a:hover { color: var(--clay); }
@@ -65,12 +66,12 @@
     .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 25px; color: var(--muted); font-size: 12px; }
     .hero-note svg { flex: 0 0 auto; color: var(--green); }
     .portrait-wrap { position: relative; justify-self: end; width: min(100%, 450px); padding: 0 22px 22px 0; }
-    .portrait-wrap::before { content: ""; position: absolute; inset: 25px 0 0 25px; border: 1px solid #9ba89e; }
+    .portrait-wrap::before { content: ""; position: absolute; inset: 25px 0 0 25px; border: 1px solid var(--green); }
     .portrait { position: relative; z-index: 1; width: 100%; height: 520px; object-fit: cover; object-position: 40% center; }
     .portrait-caption { position: absolute; z-index: 2; right: 0; bottom: 0; width: 235px; padding: 17px 20px; background: var(--white); box-shadow: 0 8px 28px rgba(33,43,36,.09); }
     .portrait-caption strong { display: block; font-family: var(--serif); font-size: 20px; font-weight: 500; }
     .portrait-caption span { color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
-    .info-band { background: var(--green); color: white; }
+    .info-band { background: var(--green-dark); color: white; }
     .info-band-inner { display: grid; grid-template-columns: 1fr 1fr; }
     .info-item { display: flex; align-items: center; gap: 16px; padding: 24px 30px; }
     .info-item + .info-item { border-left: 1px solid rgba(255,255,255,.2); }
@@ -89,11 +90,26 @@
     .credential::before { content: "—"; margin-right: 10px; color: var(--clay); }
     .approach { background: var(--sage); }
     .section-intro { max-width: 690px; margin-bottom: 48px; }
-    .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid #cbd4ca; border-bottom: 1px solid #cbd4ca; }
-    .approach-item { padding: 28px 34px 31px 0; }
-    .approach-item + .approach-item { padding-left: 34px; border-left: 1px solid #cbd4ca; }
+    .approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid #cbd4ca; border-bottom: 1px solid #cbd4ca; }
+    .approach-item { padding: 28px 24px 31px 0; }
+    .approach-item + .approach-item { padding-left: 24px; border-left: 1px solid #cbd4ca; }
     .approach-number { display: block; margin-bottom: 26px; color: var(--clay); font-family: var(--serif); font-size: 20px; }
     .approach-item p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .topic-note { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-top: 28px; color: var(--muted); font-size: 12px; }
+    .topic-note strong { margin-right: 4px; color: var(--ink); font-weight: 600; }
+    .topic-note span { padding: 7px 11px; border: 1px solid #c9e5e1; border-radius: 999px; background: rgba(255,255,255,.62); color: #315a57; }
+    .ebook { background: var(--gold-pale); }
+    .ebook-grid { display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 82px; max-width: 1010px; margin: auto; }
+    .ebook-cover-wrap { position: relative; width: min(100%, 350px); justify-self: center; padding: 18px; background: white; box-shadow: 0 14px 40px rgba(57,49,29,.14); transform: rotate(-1.5deg); }
+    .ebook-cover { width: 100%; height: auto; }
+    .ebook-copy { max-width: 560px; }
+    .ebook-badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; padding: 7px 12px; border-radius: 999px; background: #f1e3be; color: #574419; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .ebook-copy h2 { max-width: 520px; }
+    .ebook-copy p { color: var(--muted); line-height: 1.8; }
+    .ebook-facts { display: flex; gap: 20px; margin: 22px 0 26px; color: #586260; font-size: 12px; }
+    .ebook-facts span::before { content: "•"; margin-right: 8px; color: var(--clay); }
+    .ebook-copy .button { border-color: var(--green-dark); background: var(--green-dark); }
+    .ebook-copy .button:hover { background: #105e5b; }
     .modalities { background: var(--paper); }
     .modalities-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
     .modality { position: relative; min-height: 280px; padding: 32px 34px; background: var(--white); border: 1px solid var(--line); }
@@ -101,7 +117,7 @@
     .modality p { max-width: 410px; color: var(--muted); font-size: 14px; line-height: 1.75; }
     .text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; color: var(--green); font-size: 13px; font-weight: 700; text-decoration: none; }
     .text-link:hover { color: var(--clay); }
-    .contact { background: #ede9e1; }
+    .contact { background: #f1f8f7; }
     .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: 80px; }
     .contact-copy .body-copy { font-size: 15px; }
     .contact-card { padding: 32px; background: var(--white); border: 1px solid var(--line); }
@@ -125,7 +141,7 @@
     .final-cta h2 { max-width: 700px; margin: 17px auto 25px; font-size: clamp(32px, 4vw, 47px); }
     .final-cta .button { border-color: white; background: white; color: var(--green-dark); }
     .final-cta .button:hover { background: #edf1eb; }
-    footer { padding: 24px 0 30px; background: #26342d; color: rgba(255,255,255,.78); }
+    footer { padding: 24px 0 30px; background: #164f4d; color: rgba(255,255,255,.82); }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 22px; }
     .footer-brand { font-family: var(--serif); color: white; font-size: 18px; }
     .footer-small { margin: 4px 0 0; font-size: 11px; }
@@ -142,13 +158,17 @@
       .portrait { height: 450px; }
       .nav { gap: 18px; }
       .about-grid, .contact-grid, .faq-grid { gap: 45px; }
+      .approach-grid { grid-template-columns: repeat(2, 1fr); }
+      .approach-item:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid #cbd4ca; }
+      .approach-item:nth-child(4) { border-top: 1px solid #cbd4ca; }
     }
     @media (max-width: 720px) {
       .container { width: min(100% - 36px, var(--content)); }
-      .header-inner { height: 68px; }
+      .header-inner { height: 72px; }
+      .brand img { width: 82px; height: 68px; }
       .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
       .header-cta { display: none; }
-      .nav { position: absolute; top: 68px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 18px 18px; background: var(--paper); border-bottom: 1px solid var(--line); }
+      .nav { position: absolute; top: 72px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 18px 18px; background: var(--paper); border-bottom: 1px solid var(--line); }
       .nav.is-open { display: flex; }
       .nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
       .hero { padding: 48px 0 54px; }
@@ -174,6 +194,9 @@
       .approach-item, .approach-item + .approach-item { padding: 23px 0; border-left: 0; }
       .approach-item + .approach-item { border-top: 1px solid #cbd4ca; }
       .approach-number { margin-bottom: 12px; }
+      .ebook-grid { grid-template-columns: 1fr; gap: 36px; }
+      .ebook-cover-wrap { width: min(72%, 275px); }
+      .ebook-facts { flex-wrap: wrap; gap: 9px 17px; }
       .modalities-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 30px; }
       .modality { min-height: auto; padding: 25px; }
       .contact-card { padding: 24px 20px; }
@@ -191,15 +214,15 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Silvana Caldas, início">
-        <span class="brand-name">Silvana Caldas</span>
-        <span class="brand-role">Psicóloga clínica · CRP 20/08033</span>
+      <a class="brand" href="#inicio" aria-label="Silvana Caldas, psicóloga, início">
+        <img src="/assets/silvana-logo.png" alt="Silvana Caldas, psicóloga">
+        <span class="brand-crp">CRP 20/08033</span>
       </a>
       <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
       </button>
       <nav class="nav" id="site-nav" aria-label="Navegação principal">
-        <a href="#sobre">Sobre</a><a href="#atendimento">Atendimento</a><a href="#consultorio">Consultório</a><a href="#duvidas">Dúvidas</a>
+        <a href="#sobre">Sobre</a><a href="#abordagem">Abordagem</a><a href="#ebook">E-book gratuito</a><a href="#atendimento">Atendimento</a><a href="#duvidas">Dúvidas</a>
       </nav>
       <a class="button header-cta" href="https://wa.me/5592994823156?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp <span aria-hidden="true">↗</span></a>
     </div>
@@ -210,11 +233,11 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Psicologia clínica · Manaus e online</span>
-          <h1>Um espaço de escuta para compreender o que você está vivendo.</h1>
-          <p class="body-copy">A psicoterapia pode ajudar a olhar com cuidado para emoções, relações e escolhas. Um processo construído com respeito à sua história e ao seu tempo.</p>
+          <h1>Mais autoconhecimento para viver suas emoções com clareza.</h1>
+          <p class="body-copy">A psicoterapia é um espaço de escuta e reflexão sobre o que você sente, pensa e vive. Um trabalho feito em parceria, com respeito à sua história e ao seu momento.</p>
           <div class="hero-actions">
             <a class="button" href="https://wa.me/5592994823156?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer">Conversar sobre atendimento <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="#sobre">Conheça a Silvana</a>
+            <a class="button button-outline" href="#ebook">Baixe o e-book gratuito</a>
           </div>
           <div class="hero-note">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4.35 7-11a7 7 0 1 0-14 0c0 6.65 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -245,33 +268,51 @@
       <div class="container about-grid">
         <div class="about-heading">
           <span class="eyebrow">Sobre a psicóloga</span>
-          <h2>Escuta atenta, diálogo e conhecimento.</h2>
+          <h2>Psicologia com cuidado, diálogo e ciência.</h2>
         </div>
         <div class="about-copy">
-          <p class="lead">Olá, sou Silvana Caldas, psicóloga clínica em Manaus.</p>
-          <p>Meu trabalho é oferecer um espaço acolhedor e ético para que cada pessoa possa falar sobre o que sente, reconhecer padrões e construir novas formas de lidar com os desafios do cotidiano.</p>
-          <p>Minha prática reúne referências da Terapia Cognitivo-Comportamental, da Psicologia Baseada em Evidências e de estudos sobre atenção plena. O caminho terapêutico é pensado em conjunto, considerando a realidade e os objetivos de cada pessoa.</p>
+          <p class="lead">Olá, sou Silvana Caldas, psicóloga clínica e autora de “Sua Mente — Aliada ou Inimiga”.</p>
+          <p>A psicologia despertou meu interesse ainda na adolescência e segue guiando meu trabalho. Hoje, acompanho pessoas que buscam compreender melhor as emoções, fortalecer a comunicação e encontrar maneiras mais conscientes de lidar com os desafios do dia a dia.</p>
+          <p>Sou especialista em Avaliação Psicológica, Inteligências Múltiplas e Mindfulness. Na clínica, reúno referências da Terapia Cognitivo-Comportamental e da Psicologia Baseada em Evidências, em um processo construído de forma individual e colaborativa.</p>
+          <p>Atendo presencialmente em Manaus e online para brasileiros no Brasil e no exterior.</p>
           <div class="credentials" aria-label="Áreas e referências de atuação">
             <div class="credential">Psicologia clínica</div>
-            <div class="credential">Terapia Cognitivo-Comportamental</div>
             <div class="credential">Avaliação psicológica</div>
+            <div class="credential">Mindfulness e inteligência emocional</div>
             <div class="credential">Atendimento presencial e online</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="approach">
+    <section class="approach" id="abordagem">
       <div class="container">
         <div class="section-intro">
-          <span class="eyebrow">O processo terapêutico</span>
-          <h2>Um caminho feito em conjunto.</h2>
-          <p class="body-copy">Cada processo é singular. As conversas ajudam a entender o momento atual e a construir, aos poucos, um trabalho que faça sentido para você.</p>
+          <span class="eyebrow">Abordagem terapêutica</span>
+          <h2>Conhecimento aplicado à sua história.</h2>
+          <p class="body-copy">O trabalho considera a singularidade de cada pessoa e combina referências da psicologia para compreender pensamentos, emoções e comportamentos.</p>
         </div>
         <div class="approach-grid">
-          <article class="approach-item"><span class="approach-number">01</span><h3>Começar pela conversa</h3><p>Um primeiro contato para conhecer sua demanda, tirar dúvidas e entender como funciona o acompanhamento.</p></article>
-          <article class="approach-item"><span class="approach-number">02</span><h3>Compreender sua história</h3><p>Nas sessões, exploramos pensamentos, emoções e situações importantes, sem pressa e sem julgamentos.</p></article>
-          <article class="approach-item"><span class="approach-number">03</span><h3>Construir possibilidades</h3><p>O trabalho é ajustado ao longo do tempo, com objetivos conversados e atenção às mudanças que você busca.</p></article>
+          <article class="approach-item"><span class="approach-number">01</span><h3>Terapia Cognitivo-Comportamental</h3><p>Observa a relação entre pensamentos, emoções e ações e pode apoiar a construção de estratégias para situações do cotidiano.</p></article>
+          <article class="approach-item"><span class="approach-number">02</span><h3>Neurociências</h3><p>Contribuem para compreender como atenção, memória e emoções participam da experiência humana.</p></article>
+          <article class="approach-item"><span class="approach-number">03</span><h3>Psicologia Positiva</h3><p>Ajuda a olhar também para recursos pessoais, vínculos e aspectos que apoiam o bem-estar.</p></article>
+          <article class="approach-item"><span class="approach-number">04</span><h3>Práticas baseadas em evidências</h3><p>As escolhas do processo terapêutico consideram conhecimento científico, contexto e necessidades individuais.</p></article>
+        </div>
+        <div class="topic-note"><strong>Temas que podem aparecer no processo:</strong><span>autoconhecimento</span><span>assertividade</span><span>comunicação</span><span>habilidades socioemocionais</span><span>resolução de conflitos</span></div>
+      </div>
+    </section>
+
+    <section class="ebook" id="ebook">
+      <div class="container ebook-grid">
+        <div class="ebook-cover-wrap">
+          <img class="ebook-cover" src="/assets/check-list-cover.png" alt="Capa do e-book Check-List da Saúde Mental, de Silvana Caldas">
+        </div>
+        <div class="ebook-copy">
+          <span class="eyebrow">Material gratuito</span>
+          <h2>Um guia para olhar com carinho para sua saúde mental.</h2>
+          <p>Baixe o <strong>Check-List da Saúde Mental</strong>, criado por Silvana Caldas. O material apresenta cinco passos fundamentais para cultivar uma mente saudável e pode ser lido no seu ritmo.</p>
+          <div class="ebook-facts"><span>Gratuito</span><span>Arquivo PDF</span><span>10 páginas</span></div>
+          <a class="button" href="https://psicologasilvanacaldas.com.br/ebooks/check-list-saude-mental.pdf" target="_blank" rel="noopener noreferrer">Abrir o e-book gratuito <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -285,13 +326,13 @@
           <article class="modality">
             <div class="icon-box" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 10.5 12 3l8.5 7.5v9a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1v-9Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 20.5v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg></div>
             <h3>Presencial em Manaus</h3>
-            <p>Atendimento no consultório localizado no bairro Adrianópolis, em um espaço reservado para as sessões.</p>
+            <p>Atendimento no consultório localizado no bairro Adrianópolis, em um espaço reservado para as sessões. Consulte pelo WhatsApp os horários disponíveis.</p>
             <a class="text-link" href="https://maps.google.com/?q=Rua+Salvador+120+Adrianópolis+Manaus+AM" target="_blank" rel="noopener noreferrer">Ver endereço no mapa <span aria-hidden="true">↗</span></a>
           </article>
           <article class="modality">
             <div class="icon-box" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5"/></svg></div>
             <h3>Online</h3>
-            <p>Sessões por videochamada, para brasileiros que vivem no país ou no exterior. Consulte as orientações para o atendimento.</p>
+            <p>Atendimento por videochamada, para brasileiros que vivem no país ou no exterior. As sessões são realizadas preferencialmente pelo Google Meet.</p>
             <a class="text-link" href="https://wa.me/5592994823156?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento%20online." target="_blank" rel="noopener noreferrer">Consultar atendimento online <span aria-hidden="true">↗</span></a>
           </article>
         </div>
@@ -322,10 +363,11 @@
           <p class="body-copy">Se ainda tiver alguma dúvida, você pode escrever diretamente para a psicóloga.</p>
         </div>
         <div class="faq-list">
-          <details><summary>Como faço para marcar uma conversa?</summary><p>Entre em contato pelo WhatsApp para consultar horários disponíveis e receber as informações sobre o atendimento.</p></details>
-          <details><summary>Posso fazer terapia online?</summary><p>Sim. O atendimento online é uma opção para brasileiros que vivem no Brasil ou no exterior. As orientações são combinadas no contato inicial.</p></details>
-          <details><summary>O que posso levar para a primeira sessão?</summary><p>Você pode começar falando do que motivou a busca por terapia, no seu ritmo. Não é necessário preparar nada antes.</p></details>
-          <details><summary>Como saber valores e duração das sessões?</summary><p>Esses detalhes podem variar. Consulte diretamente pelo WhatsApp para receber as informações atualizadas.</p></details>
+          <details><summary>Como funciona o primeiro encontro?</summary><p>É uma conversa para compreender o que motivou a busca, conhecer seu contexto, esclarecer dúvidas e alinhar expectativas sobre a psicoterapia.</p></details>
+          <details><summary>Como são os atendimentos online?</summary><p>As sessões acontecem por videochamada, preferencialmente pelo Google Meet. O atendimento online é oferecido a brasileiros no Brasil e no exterior.</p></details>
+          <details><summary>Quanto tempo dura uma sessão?</summary><p>As sessões têm duração aproximada de 50 minutos. Para confirmar detalhes e horários disponíveis, fale diretamente com Silvana.</p></details>
+          <details><summary>O atendimento é confidencial?</summary><p>O trabalho segue as normas éticas da Psicologia. No contato inicial, você pode conversar sobre o sigilo profissional e seus limites.</p></details>
+          <details><summary>Atende convênios? Como saber o valor?</summary><p>O site informa que o atendimento é particular e que são emitidos recibos. Valores e formas de pagamento são compartilhados diretamente pelo WhatsApp.</p></details>
         </div>
       </div>
     </section>
@@ -333,7 +375,7 @@
     <section class="final-cta">
       <div class="container">
         <span class="eyebrow">Um primeiro contato</span>
-        <h2>Se fizer sentido para você, podemos conversar.</h2>
+        <h2>Vamos conversar sobre o que você está buscando?</h2>
         <a class="button" href="https://wa.me/5592994823156?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20psicol%C3%B3gico." target="_blank" rel="noopener noreferrer">Falar com Silvana <span aria-hidden="true">↗</span></a>
       </div>
     </section>
